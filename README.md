@@ -1,3 +1,17 @@
+About protobufjs-no-cli
+=======================
+
+Our project only needs to use the loadProto API from protobufjs, not the
+CLI. The ascli package uses strange @latest dependencies which trigger
+some bugs in npm.  So this package lets us depend on protobufjs without
+pulling in the ascli dependency.
+
+A PR to fix ascli is at https://github.com/dcodeIO/ascli/pull/2
+
+The underlying bug seems to be tracked at
+https://github.com/npm/npm/issues/13642
+
+
 ![protobuf.js - Protocol Buffers for JavaScript. Finally.](https://raw.github.com/dcodeIO/protobuf.js/master/protobuf.png)
 =====================================
 **Protocol Buffers** are a language-neutral, platform-neutral, extensible way of serializing structured data for use

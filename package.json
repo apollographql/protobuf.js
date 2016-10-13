@@ -1,5 +1,5 @@
 {
-  "name": "protobufjs",
+  "name": "protobufjs-no-cli",
   "version": "5.0.1",
   "description": "Protocol Buffers for JavaScript. Finally.",
   "author": "Daniel Wirtz <dcode@dcode.io>",
@@ -7,9 +7,6 @@
     "Frank Xu <yyfrankyy@gmail.com>"
   ],
   "main": "./dist/protobuf.js",
-  "bin": {
-    "pbjs": "./bin/pbjs"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/dcodeIO/protobuf.js.git"
@@ -28,10 +25,7 @@
     "webrtc"
   ],
   "dependencies": {
-    "ascli": "~1",
-    "bytebuffer": "~5",
-    "glob": "^5.0.10",
-    "yargs": "^3.10.0"
+    "bytebuffer": "~5"
   },
   "devDependencies": {
     "testjs": "~1 >=1.0.4",
@@ -49,11 +43,8 @@
     "path": false
   },
   "scripts": {
-    "prepublish": "npm test",
-    "test": "node bin/pbjs tests/complex.proto --target=json > tests/complex.json && node node_modules/testjs/bin/testjs tests/suite.js",
     "make": "npm run-script build && npm run-script compile && npm run-script descriptor2json && npm run-script compress && npm test && npm run-script jsdoc",
     "build": "node scripts/build.js",
-    "descriptor2json": "node bin/pbjs src/google/protobuf/descriptor.proto --target=json > src/google/protobuf/descriptor.json",
     "compile": "npm run-script compile-full && npm run-script compile-light",
     "compile-full": "ccjs dist/protobuf.js --create_source_map=dist/protobuf.min.map --compilation_level=SIMPLE_OPTIMIZATIONS > dist/protobuf.min.js",
     "compile-light": "ccjs dist/protobuf-light.js --create_source_map=dist/protobuf-light.min.map --compilation_level=SIMPLE_OPTIMIZATIONS > dist/protobuf-light.min.js",
