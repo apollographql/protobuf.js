@@ -1810,6 +1810,11 @@ export interface Constructor<T> extends Function {
 /** Properties type. */
 type Properties<T> = { [P in keyof T]?: T[P] };
 
+/** Type that is convertible to array. */
+export interface ToArray<T> {
+    toArray(): T[];
+}
+
 /**
  * Any compatible Buffer instance.
  * This is a minimal stand-alone definition of a Buffer instance. The actual type is that exported by node's typings.
