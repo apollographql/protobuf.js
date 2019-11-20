@@ -1,8 +1,8 @@
 /*!
- * protobuf.js v6.8.8 (c) 2016, daniel wirtz
- * compiled thu, 19 jul 2018 00:33:25 utc
+ * protobuf.js v1.0.2 (c) 2016, daniel wirtz
+ * compiled wed, 20 nov 2019 20:07:00 utc
  * licensed under the bsd-3-clause license
- * see: https://github.com/dcodeio/protobuf.js for details
+ * see: https://github.com/apollographql/protobuf.js for details
  */
 (function(undefined){"use strict";(function prelude(modules, cache, entries) {
 

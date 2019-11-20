@@ -1,16 +1,16 @@
 {
-  "name": "protobufjs",
-  "version": "6.8.8",
+  "name": "@apollo/protobufjs",
+  "version": "1.0.2",
   "versionScheme": "~",
   "description": "Protocol Buffers for JavaScript (& TypeScript).",
   "author": "Daniel Wirtz <dcode+protobufjs@dcode.io>",
   "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dcodeIO/protobuf.js.git"
+    "url": "https://github.com/apollographql/protobuf.js.git"
   },
-  "bugs": "https://github.com/dcodeIO/protobuf.js/issues",
-  "homepage": "http://dcode.io/protobuf.js",
+  "bugs": "https://github.com/apollographql/protobuf.js/issues",
+  "homepage": "https://github.com/apollographql/protobuf.js",
   "keywords": [
     "protobuf",
     "protocol-buffers",
@@ -20,8 +20,8 @@
   "main": "index.js",
   "types": "index.d.ts",
   "bin": {
-    "pbjs": "bin/pbjs",
-    "pbts": "bin/pbts"
+    "apollo-pbjs": "bin/pbjs",
+    "apollo-pbts": "bin/pbts"
   },
   "scripts": {
     "bench": "node bench",
@@ -77,7 +77,7 @@
     "gulp-uglify": "^3.0.0",
     "istanbul": "^0.4.5",
     "jaguarjs-jsdoc": "github:dcodeIO/jaguarjs-jsdoc",
-    "jsdoc": "^3.5.5",
+    "jsdoc": "^3.6.3",
     "minimist": "^1.2.0",
     "reflect-metadata": "^0.1.12",
     "semver": "^5.5.0",
