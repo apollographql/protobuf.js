@@ -1,6 +1,6 @@
 /*!
  * protobuf.js v1.0.2 (c) 2016, daniel wirtz
- * compiled wed, 20 nov 2019 20:07:00 utc
+ * compiled thu, 21 nov 2019 00:12:17 utc
  * licensed under the bsd-3-clause license
  * see: https://github.com/apollographql/protobuf.js for details
  */
@@ -6085,15 +6085,6 @@ util.newBuffer = function newBuffer(sizeOrArray) {
  * @type {Constructor<Uint8Array>}
  */
 util.Array = typeof Uint8Array !== "undefined" ? Uint8Array /* istanbul ignore next */ : Array;
-
-/**
- * Any compatible Long instance.
- * This is a minimal stand-alone definition of a Long instance. The actual type is that exported by long.js.
- * @interface Long
- * @property {number} low Low bits
- * @property {number} high High bits
- * @property {boolean} unsigned Whether unsigned or not
- */
 
 /**
  * Long.js's Long class if available.
