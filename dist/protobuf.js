@@ -1,6 +1,6 @@
 /*!
- * protobuf.js v1.0.2 (c) 2016, daniel wirtz
- * compiled thu, 21 nov 2019 00:12:17 utc
+ * protobuf.js v1.0.3 (c) 2016, daniel wirtz
+ * compiled thu, 21 nov 2019 00:36:05 utc
  * licensed under the bsd-3-clause license
  * see: https://github.com/apollographql/protobuf.js for details
  */
