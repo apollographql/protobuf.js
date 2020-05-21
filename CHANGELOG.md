@@ -1,7 +1,11 @@
+# [1.0.4](https://github.com/apollographql/protobuf.js/releases/tag/1.0.4)
+
+## New
+[:hash:](https://github.com/apollographql/protobuf.js/commit/f15bfa2c2ef8e91746821835904e88ffd199e97a) Allow plain JS object repeated fields to use toArray() method<br /> (see https://github.com/protobufjs/protobuf.js/pull/1302)
+
 # [1.0.3](https://github.com/apollographql/protobuf.js/releases/tag/1.0.3)
 
 ## Other
-[:hash:](https://github.com/apollographql/protobuf.js/commit/886019a71fe6f01e9ff3d826f402c4ebed38f38f) Version bump for release<br />
 [:hash:](https://github.com/apollographql/protobuf.js/commit/d13506a71f0634ea7a89a57e0102460b9bb438fb) Remove duplicated Long types in index.d.ts<br />
 
 # [1.0.2](https://github.com/apollographql/protobuf.js/releases/tag/1.0.2)
