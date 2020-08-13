@@ -1,3 +1,5 @@
+import * as Long from "long";
+
 import * as $protobuf from "../..";
 export interface IPackage {
     name?: (string|null);
@@ -11,10 +13,10 @@ export interface IPackage {
     homepage?: (string|null);
     keywords?: (string[]|null);
     main?: (string|null);
-    bin?: ({ [k: string]: string }|null);
-    scripts?: ({ [k: string]: string }|null);
-    dependencies?: ({ [k: string]: string }|null);
-    devDependencies?: ({ [k: string]: string }|null);
+    bin?: ({ [k: string]: string | undefined }|null);
+    scripts?: ({ [k: string]: string | undefined }|null);
+    dependencies?: ({ [k: string]: string | undefined }|null);
+    devDependencies?: ({ [k: string]: string | undefined }|null);
     types?: (string|null);
     cliDependencies?: (string[]|null);
 }
@@ -32,10 +34,10 @@ export class Package implements IPackage {
     public homepage: string;
     public keywords: string[];
     public main: string;
-    public bin: { [k: string]: string };
-    public scripts: { [k: string]: string };
-    public dependencies: { [k: string]: string };
-    public devDependencies: { [k: string]: string };
+    public bin: { [k: string]: string | undefined };
+    public scripts: { [k: string]: string | undefined };
+    public dependencies: { [k: string]: string | undefined };
+    public devDependencies: { [k: string]: string | undefined };
     public types: string;
     public cliDependencies: string[];
     public static create(properties?: IPackage): Package;
@@ -43,10 +45,10 @@ export class Package implements IPackage {
     public static encodeDelimited(message: IPackage, writer?: $protobuf.Writer): $protobuf.Writer;
     public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): Package;
     public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): Package;
-    public static verify(message: { [k: string]: any }): (string|null);
-    public static fromObject(object: { [k: string]: any }): Package;
-    public static toObject(message: Package, options?: $protobuf.IConversionOptions): { [k: string]: any };
-    public toJSON(): { [k: string]: any };
+    public static verify(message: { [k: string]: any | undefined }): (string|null);
+    public static fromObject(object: { [k: string]: any | undefined }): Package;
+    public static toObject(message: Package, options?: $protobuf.IConversionOptions): { [k: string]: any | undefined };
+    public toJSON(): { [k: string]: any | undefined };
 }
 
 export namespace Package {
@@ -65,9 +67,9 @@ export namespace Package {
         public static encodeDelimited(message: Package.IRepository, writer?: $protobuf.Writer): $protobuf.Writer;
         public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): Package.Repository;
         public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): Package.Repository;
-        public static verify(message: { [k: string]: any }): (string|null);
-        public static fromObject(object: { [k: string]: any }): Package.Repository;
-        public static toObject(message: Package.Repository, options?: $protobuf.IConversionOptions): { [k: string]: any };
-        public toJSON(): { [k: string]: any };
+        public static verify(message: { [k: string]: any | undefined }): (string|null);
+        public static fromObject(object: { [k: string]: any | undefined }): Package.Repository;
+        public static toObject(message: Package.Repository, options?: $protobuf.IConversionOptions): { [k: string]: any | undefined };
+        public toJSON(): { [k: string]: any | undefined };
     }
 }

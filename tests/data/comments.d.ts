@@ -1,3 +1,5 @@
+import * as Long from "long";
+
 import * as $protobuf from "../..";
 export interface ITest1 {
     field1?: (string|null);
@@ -15,10 +17,10 @@ export class Test1 implements ITest1 {
     public static encodeDelimited(message: ITest1, writer?: $protobuf.Writer): $protobuf.Writer;
     public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): Test1;
     public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): Test1;
-    public static verify(message: { [k: string]: any }): (string|null);
-    public static fromObject(object: { [k: string]: any }): Test1;
-    public static toObject(message: Test1, options?: $protobuf.IConversionOptions): { [k: string]: any };
-    public toJSON(): { [k: string]: any };
+    public static verify(message: { [k: string]: any | undefined }): (string|null);
+    public static fromObject(object: { [k: string]: any | undefined }): Test1;
+    public static toObject(message: Test1, options?: $protobuf.IConversionOptions): { [k: string]: any | undefined };
+    public toJSON(): { [k: string]: any | undefined };
 }
 
 export interface ITest2 {
@@ -31,15 +33,8 @@ export class Test2 implements ITest2 {
     public static encodeDelimited(message: ITest2, writer?: $protobuf.Writer): $protobuf.Writer;
     public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): Test2;
     public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): Test2;
-    public static verify(message: { [k: string]: any }): (string|null);
-    public static fromObject(object: { [k: string]: any }): Test2;
-    public static toObject(message: Test2, options?: $protobuf.IConversionOptions): { [k: string]: any };
-    public toJSON(): { [k: string]: any };
-}
-
-export enum Test3 {
-    ONE = 1,
-    TWO = 2,
-    THREE = 3,
-    FOUR = 4
+    public static verify(message: { [k: string]: any | undefined }): (string|null);
+    public static fromObject(object: { [k: string]: any | undefined }): Test2;
+    public static toObject(message: Test2, options?: $protobuf.IConversionOptions): { [k: string]: any | undefined };
+    public toJSON(): { [k: string]: any | undefined };
 }
