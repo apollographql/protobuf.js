@@ -90,6 +90,9 @@
     "vinyl-fs": "^3.0.3",
     "vinyl-source-stream": "^2.0.0"
   },
+  "peerDependencies": {
+    "long": "^4.0.0"
+  },
   "cliDependencies": [
     "semver",
     "chalk",
