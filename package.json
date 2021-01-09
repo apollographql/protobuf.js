@@ -91,7 +91,16 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "peerDependencies": {
+    "@types/long": "4.0.0",
     "long": "^4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/long": {
+      "optional": true
+    },
+    "long": {
+      "optional": true
+    }
   },
   "cliDependencies": [
     "semver",
