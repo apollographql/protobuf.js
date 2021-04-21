@@ -15,9 +15,22 @@ var Enum     = require("./enum"),
  * @ignore
  */
 function genTypePartial(gen, field, fieldIndex, ref) {
-    return field.resolvedType.group
-        ? gen("types[%i].encode(%s,w.uint32(%i)).uint32(%i)", fieldIndex, ref, (field.id << 3 | 3) >>> 0, (field.id << 3 | 4) >>> 0)
-        : gen("types[%i].encode(%s,w.uint32(%i).fork()).ldelim()", fieldIndex, ref, (field.id << 3 | 2) >>> 0);
+  /* eslint-disable no-unexpected-multiline */
+  if (field.resolvedType.group) {
+    gen("types[%i].encode(%s,w.uint32(%i)).uint32(%i)", fieldIndex, ref, (field.id << 3 | 3) >>> 0, (field.id << 3 | 4) >>> 0);
+    return;
+  }
+  var key = (field.id << 3 | 2) >>> 0;
+  if (field.preEncoded()) {
+    gen("if (%s instanceof Uint8Array) {", ref)
+    ("w.uint32(%i)", key)
+    ("w.bytes(%s)", ref)
+    ("} else {");
+  }
+  gen("types[%i].encode(%s,w.uint32(%i).fork()).ldelim()", fieldIndex, ref, key);
+  if (field.preEncoded()) {
+    gen("}")
+  }
 }
 
 /**

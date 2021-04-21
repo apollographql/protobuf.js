@@ -160,8 +160,14 @@ function verifier(mtype) {
             ("if(!Array.isArray(%s))", arrayRef)
                 ("return%j", invalid(field, "array"))
             ("for(var i=0;i<%s.length;++i){", arrayRef);
+                if (field.preEncoded()) {
+                  gen("if (!(%s instanceof Uint8Array)) {", arrayRef + "[i]")
+                }
                 genVerifyValue(gen, field, i, arrayRef + "[i]")
-            ("}");
+                if (field.preEncoded()) {
+                  gen("}");
+                }
+            gen("}");
 
         // required or present fields
         } else {

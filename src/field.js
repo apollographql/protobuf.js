@@ -320,6 +320,10 @@ Field.prototype.useToArray = function useToArray() {
     return !!this.getOption("(js_use_toArray)");
 };
 
+Field.prototype.preEncoded = function preEncoded() {
+    return !!this.getOption("(js_preEncoded)");
+};
+
 /**
  * Decorator function as returned by {@link Field.d} and {@link MapField.d} (TypeScript).
  * @typedef FieldDecorator

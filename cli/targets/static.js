@@ -346,10 +346,11 @@ function toJsType(field, forInterface) {
     if (field.map)
         return "Object.<string," + type + ">";
     if (field.repeated) {
+        var fullType = field.preEncoded() ? type + "|Uint8Array" : type;
         if (forInterface && field.useToArray()) {
-            return "$protobuf.ToArray.<" + type + ">|Array.<" + type + ">";
+            return "$protobuf.ToArray.<" + fullType + ">|Array.<" + fullType + ">";
         }
-        return "Array.<" + type + ">";
+        return "Array.<" + fullType + ">";
     }
     return type;
 }
