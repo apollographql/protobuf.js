@@ -1,6 +1,6 @@
 /*!
  * protobuf.js v1.0.5 (c) 2016, daniel wirtz
- * compiled fri, 14 aug 2020 05:32:49 utc
+ * compiled thu, 22 apr 2021 14:35:06 utc
  * licensed under the bsd-3-clause license
  * see: https://github.com/apollographql/protobuf.js for details
  */
@@ -1540,9 +1540,22 @@ var Enum     = require(14),
  * @ignore
  */
 function genTypePartial(gen, field, fieldIndex, ref) {
-    return field.resolvedType.group
-        ? gen("types[%i].encode(%s,w.uint32(%i)).uint32(%i)", fieldIndex, ref, (field.id << 3 | 3) >>> 0, (field.id << 3 | 4) >>> 0)
-        : gen("types[%i].encode(%s,w.uint32(%i).fork()).ldelim()", fieldIndex, ref, (field.id << 3 | 2) >>> 0);
+  /* eslint-disable no-unexpected-multiline */
+  if (field.resolvedType.group) {
+    gen("types[%i].encode(%s,w.uint32(%i)).uint32(%i)", fieldIndex, ref, (field.id << 3 | 3) >>> 0, (field.id << 3 | 4) >>> 0);
+    return;
+  }
+  var key = (field.id << 3 | 2) >>> 0;
+  if (field.preEncoded()) {
+    gen("if (%s instanceof Uint8Array) {", ref)
+    ("w.uint32(%i)", key)
+    ("w.bytes(%s)", ref)
+    ("} else {");
+  }
+  gen("types[%i].encode(%s,w.uint32(%i).fork()).ldelim()", fieldIndex, ref, key);
+  if (field.preEncoded()) {
+    gen("}")
+  }
 }
 
 /**
@@ -2134,6 +2147,10 @@ Field.prototype.resolve = function resolve() {
 
 Field.prototype.useToArray = function useToArray() {
     return !!this.getOption("(js_use_toArray)");
+};
+
+Field.prototype.preEncoded = function preEncoded() {
+    return !!this.getOption("(js_preEncoded)");
 };
 
 /**
@@ -6517,8 +6534,14 @@ function verifier(mtype) {
             ("if(!Array.isArray(%s))", arrayRef)
                 ("return%j", invalid(field, "array"))
             ("for(var i=0;i<%s.length;++i){", arrayRef);
+                if (field.preEncoded()) {
+                  gen("if (!(%s instanceof Uint8Array)) {", arrayRef + "[i]")
+                }
                 genVerifyValue(gen, field, i, arrayRef + "[i]")
-            ("}");
+                if (field.preEncoded()) {
+                  gen("}");
+                }
+            gen("}");
 
         // required or present fields
         } else {
