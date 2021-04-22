@@ -551,16 +551,18 @@ function buildType(ref, type) {
     }
 
     if (config.convert) {
-        push("");
-        pushComment([
-            "Creates " + aOrAn(type.name) + " message from a plain object. Also converts values to their respective internal types.",
-            "@function fromObject",
-            "@memberof " + exportName(type),
-            "@static",
-            "@param {Object.<string,*>} " + (config.beautify ? "object" : "d") + " Plain object",
-            "@returns {" + exportName(type) + "} " + type.name
-        ]);
-        buildFunction(type, "fromObject", protobuf.converter.fromObject(type));
+        if (config.fromObject) {
+            push("");
+            pushComment([
+                "Creates " + aOrAn(type.name) + " message from a plain object. Also converts values to their respective internal types.",
+                "@function fromObject",
+                "@memberof " + exportName(type),
+                "@static",
+                "@param {Object.<string,*>} " + (config.beautify ? "object" : "d") + " Plain object",
+                "@returns {" + exportName(type) + "} " + type.name
+            ]);
+            buildFunction(type, "fromObject", protobuf.converter.fromObject(type));
+        }
 
         push("");
         pushComment([
