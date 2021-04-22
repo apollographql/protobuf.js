@@ -1,5 +1,11 @@
+# [1.2.0](https://github.com/apollographql/protobuf.js/releases/tag/1.2.0)
+
+## Other
+[:hash:](https://github.com/apollographql/protobuf.js/commit/1d86294348516ae629fe000f2b6c8b7de6e2c96b) Revert "Map field TypeScript types shouldn't imply all keys exist"<br />
+
 # [1.1.0](https://github.com/apollographql/protobuf.js/releases/tag/1.1.0)
 
+## Other
 [:hash:](https://github.com/apollographql/protobuf.js/commit/fc43eede622839563fdbdd3ff4ce6d92d2e4ee83) Allow turning off generation of fromObject<br />
 [:hash:](https://github.com/apollographql/protobuf.js/commit/378168b3e17aeefeea1eefb04290d47482bc14bc) Allow pre-encoded messages in repeated fields<br />
 
