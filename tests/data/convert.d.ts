@@ -10,7 +10,7 @@ export interface IMessage {
     bytesRepeated?: (Uint8Array[]|null);
     enumVal?: (Message.SomeEnum|null);
     enumRepeated?: (Message.SomeEnum[]|null);
-    int64Map?: ({ [k: string]: (number|Long) | undefined }|null);
+    int64Map?: ({ [k: string]: (number|Long) }|null);
 }
 
 export class Message implements IMessage {
@@ -23,16 +23,16 @@ export class Message implements IMessage {
     public bytesRepeated: Uint8Array[];
     public enumVal: Message.SomeEnum;
     public enumRepeated: Message.SomeEnum[];
-    public int64Map: { [k: string]: (number|Long) | undefined };
+    public int64Map: { [k: string]: (number|Long) };
     public static create(properties?: IMessage): Message;
     public static encode(message: IMessage, writer?: $protobuf.Writer): $protobuf.Writer;
     public static encodeDelimited(message: IMessage, writer?: $protobuf.Writer): $protobuf.Writer;
     public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): Message;
     public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): Message;
-    public static verify(message: { [k: string]: any | undefined }): (string|null);
-    public static fromObject(object: { [k: string]: any | undefined }): Message;
-    public static toObject(message: Message, options?: $protobuf.IConversionOptions): { [k: string]: any | undefined };
-    public toJSON(): { [k: string]: any | undefined };
+    public static verify(message: { [k: string]: any }): (string|null);
+    public static fromObject(object: { [k: string]: any }): Message;
+    public static toObject(message: Message, options?: $protobuf.IConversionOptions): { [k: string]: any };
+    public toJSON(): { [k: string]: any };
 }
 
 export namespace Message {

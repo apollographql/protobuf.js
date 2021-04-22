@@ -25,10 +25,10 @@ export class MyRequest implements IMyRequest {
     public static encodeDelimited(message: IMyRequest, writer?: $protobuf.Writer): $protobuf.Writer;
     public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): MyRequest;
     public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): MyRequest;
-    public static verify(message: { [k: string]: any | undefined }): (string|null);
-    public static fromObject(object: { [k: string]: any | undefined }): MyRequest;
-    public static toObject(message: MyRequest, options?: $protobuf.IConversionOptions): { [k: string]: any | undefined };
-    public toJSON(): { [k: string]: any | undefined };
+    public static verify(message: { [k: string]: any }): (string|null);
+    public static fromObject(object: { [k: string]: any }): MyRequest;
+    public static toObject(message: MyRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+    public toJSON(): { [k: string]: any };
 }
 
 export interface IMyResponse {
@@ -43,8 +43,8 @@ export class MyResponse implements IMyResponse {
     public static encodeDelimited(message: IMyResponse, writer?: $protobuf.Writer): $protobuf.Writer;
     public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): MyResponse;
     public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): MyResponse;
-    public static verify(message: { [k: string]: any | undefined }): (string|null);
-    public static fromObject(object: { [k: string]: any | undefined }): MyResponse;
-    public static toObject(message: MyResponse, options?: $protobuf.IConversionOptions): { [k: string]: any | undefined };
-    public toJSON(): { [k: string]: any | undefined };
+    public static verify(message: { [k: string]: any }): (string|null);
+    public static fromObject(object: { [k: string]: any }): MyResponse;
+    public static toObject(message: MyResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+    public toJSON(): { [k: string]: any };
 }
