@@ -74,7 +74,7 @@ LongBits.fromNumber = function fromNumber(value) {
 
 /**
  * Constructs new long bits from a number, long or string.
- * @param {Long|number|string} value Value
+ * @param {number|string} value Value
  * @returns {util.LongBits} Instance
  */
 LongBits.from = function from(value) {
@@ -106,7 +106,7 @@ LongBits.prototype.toNumber = function toNumber(unsigned) {
     return this.lo + this.hi * 4294967296;
 };
 
-/**
+/*
  * Converts this long bits to a long.
  * @param {boolean} [unsigned=false] Whether unsigned or not
  * @returns {Long} Long

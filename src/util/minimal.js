@@ -157,9 +157,8 @@ util.newBuffer = function newBuffer(sizeOrArray) {
  */
 util.Array = typeof Uint8Array !== "undefined" ? Uint8Array /* istanbul ignore next */ : Array;
 
-/**
+/*
  * Long.js's Long class if available.
- * @type {Constructor<Long>}
  */
 util.Long = /* istanbul ignore next */ util.global.dcodeIO && /* istanbul ignore next */ util.global.dcodeIO.Long
          || /* istanbul ignore next */ util.global.Long
@@ -186,7 +185,7 @@ util.key32Re = /^-?(?:0|[1-9][0-9]*)$/;
  */
 util.key64Re = /^(?:[\\x00-\\xff]{8}|-?(?:0|[1-9][0-9]*))$/;
 
-/**
+/*
  * Converts a number or long to an 8 characters long hash string.
  * @param {Long|number} value Value to convert
  * @returns {string} Hash
@@ -197,7 +196,7 @@ util.longToHash = function longToHash(value) {
         : util.LongBits.zeroHash;
 };
 
-/**
+/*
  * Converts an 8 characters long hash string to a long or number.
  * @param {string} hash Hash
  * @param {boolean} [unsigned=false] Whether unsigned or not

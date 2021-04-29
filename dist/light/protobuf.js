@@ -1,6 +1,6 @@
 /*!
- * protobuf.js v1.2.0 (c) 2016, daniel wirtz
- * compiled thu, 29 apr 2021 21:26:11 utc
+ * protobuf.js v1.2.1 (c) 2016, daniel wirtz
+ * compiled thu, 29 apr 2021 21:46:32 utc
  * licensed under the bsd-3-clause license
  * see: https://github.com/apollographql/protobuf.js for details
  */
@@ -2171,7 +2171,7 @@ Field.prototype.preEncoded = function preEncoded() {
  * @param {"optional"|"required"|"repeated"} [fieldRule="optional"] Field rule
  * @param {T} [defaultValue] Default value
  * @returns {FieldDecorator} Decorator function
- * @template T extends number | number[] | Long | Long[] | string | string[] | boolean | boolean[] | Uint8Array | Uint8Array[] | Buffer | Buffer[]
+ * @template T extends number | number[] | string | string[] | boolean | boolean[] | Uint8Array | Uint8Array[] | Buffer | Buffer[]
  */
 Field.d = function decorateField(fieldId, fieldType, fieldRule, defaultValue) {
 
@@ -2461,7 +2461,7 @@ MapField.prototype.resolve = function resolve() {
  * @param {"int32"|"uint32"|"sint32"|"fixed32"|"sfixed32"|"int64"|"uint64"|"sint64"|"fixed64"|"sfixed64"|"bool"|"string"} fieldKeyType Field key type
  * @param {"double"|"float"|"int32"|"uint32"|"sint32"|"fixed32"|"sfixed32"|"int64"|"uint64"|"sint64"|"fixed64"|"sfixed64"|"bool"|"string"|"bytes"|Object|Constructor<{}>} fieldValueType Field value type
  * @returns {FieldDecorator} Decorator function
- * @template T extends { [key: string]: number | Long | string | boolean | Uint8Array | Buffer | number[] | Message<{}> }
+ * @template T extends { [key: string]: number | string | boolean | Uint8Array | Buffer | number[] | Message<{}> }
  */
 MapField.d = function decorateMapField(fieldId, fieldKeyType, fieldValueType) {
 
@@ -3788,21 +3788,21 @@ function readLongVarint() {
 
 /* eslint-enable no-invalid-this */
 
-/**
+/*
  * Reads a varint as a signed 64 bit value.
  * @name Reader#int64
  * @function
  * @returns {Long} Value read
  */
 
-/**
+/*
  * Reads a varint as an unsigned 64 bit value.
  * @name Reader#uint64
  * @function
  * @returns {Long} Value read
  */
 
-/**
+/*
  * Reads a zig-zag encoded varint as a signed 64 bit value.
  * @name Reader#sint64
  * @function
@@ -3863,14 +3863,14 @@ function readFixed64(/* this: Reader */) {
 
 /* eslint-enable no-invalid-this */
 
-/**
+/*
  * Reads fixed 64 bits.
  * @name Reader#fixed64
  * @function
  * @returns {Long} Value read
  */
 
-/**
+/*
  * Reads zig-zag encoded fixed 64 bits.
  * @name Reader#sfixed64
  * @function
@@ -5839,7 +5839,7 @@ LongBits.fromNumber = function fromNumber(value) {
 
 /**
  * Constructs new long bits from a number, long or string.
- * @param {Long|number|string} value Value
+ * @param {number|string} value Value
  * @returns {util.LongBits} Instance
  */
 LongBits.from = function from(value) {
@@ -5871,7 +5871,7 @@ LongBits.prototype.toNumber = function toNumber(unsigned) {
     return this.lo + this.hi * 4294967296;
 };
 
-/**
+/*
  * Converts this long bits to a long.
  * @param {boolean} [unsigned=false] Whether unsigned or not
  * @returns {Long} Long
@@ -6124,9 +6124,8 @@ util.newBuffer = function newBuffer(sizeOrArray) {
  */
 util.Array = typeof Uint8Array !== "undefined" ? Uint8Array /* istanbul ignore next */ : Array;
 
-/**
+/*
  * Long.js's Long class if available.
- * @type {Constructor<Long>}
  */
 util.Long = /* istanbul ignore next */ util.global.dcodeIO && /* istanbul ignore next */ util.global.dcodeIO.Long
          || /* istanbul ignore next */ util.global.Long
@@ -6153,7 +6152,7 @@ util.key32Re = /^-?(?:0|[1-9][0-9]*)$/;
  */
 util.key64Re = /^(?:[\\x00-\\xff]{8}|-?(?:0|[1-9][0-9]*))$/;
 
-/**
+/*
  * Converts a number or long to an 8 characters long hash string.
  * @param {Long|number} value Value to convert
  * @returns {string} Hash
@@ -6164,7 +6163,7 @@ util.longToHash = function longToHash(value) {
         : util.LongBits.zeroHash;
 };
 
-/**
+/*
  * Converts an 8 characters long hash string to a long or number.
  * @param {string} hash Hash
  * @param {boolean} [unsigned=false] Whether unsigned or not
@@ -6901,7 +6900,7 @@ function writeVarint64(val, buf, pos) {
 
 /**
  * Writes an unsigned 64 bit value as a varint.
- * @param {Long|number|string} value Value to write
+ * @param {number|string} value Value to write
  * @returns {Writer} `this`
  * @throws {TypeError} If `value` is a string and no long library is present.
  */
@@ -6913,7 +6912,7 @@ Writer.prototype.uint64 = function write_uint64(value) {
 /**
  * Writes a signed 64 bit value as a varint.
  * @function
- * @param {Long|number|string} value Value to write
+ * @param {number|string} value Value to write
  * @returns {Writer} `this`
  * @throws {TypeError} If `value` is a string and no long library is present.
  */
@@ -6921,7 +6920,7 @@ Writer.prototype.int64 = Writer.prototype.uint64;
 
 /**
  * Writes a signed 64 bit value as a varint, zig-zag encoded.
- * @param {Long|number|string} value Value to write
+ * @param {number|string} value Value to write
  * @returns {Writer} `this`
  * @throws {TypeError} If `value` is a string and no long library is present.
  */
@@ -6965,7 +6964,7 @@ Writer.prototype.sfixed32 = Writer.prototype.fixed32;
 
 /**
  * Writes an unsigned 64 bit value as fixed 64 bits.
- * @param {Long|number|string} value Value to write
+ * @param {number|string} value Value to write
  * @returns {Writer} `this`
  * @throws {TypeError} If `value` is a string and no long library is present.
  */
@@ -6977,7 +6976,7 @@ Writer.prototype.fixed64 = function write_fixed64(value) {
 /**
  * Writes a signed 64 bit value as fixed 64 bits.
  * @function
- * @param {Long|number|string} value Value to write
+ * @param {number|string} value Value to write
  * @returns {Writer} `this`
  * @throws {TypeError} If `value` is a string and no long library is present.
  */

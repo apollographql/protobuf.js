@@ -342,7 +342,7 @@ Field.prototype.preEncoded = function preEncoded() {
  * @param {"optional"|"required"|"repeated"} [fieldRule="optional"] Field rule
  * @param {T} [defaultValue] Default value
  * @returns {FieldDecorator} Decorator function
- * @template T extends number | number[] | Long | Long[] | string | string[] | boolean | boolean[] | Uint8Array | Uint8Array[] | Buffer | Buffer[]
+ * @template T extends number | number[] | string | string[] | boolean | boolean[] | Uint8Array | Uint8Array[] | Buffer | Buffer[]
  */
 Field.d = function decorateField(fieldId, fieldType, fieldRule, defaultValue) {
 

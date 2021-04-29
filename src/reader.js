@@ -171,21 +171,21 @@ function readLongVarint() {
 
 /* eslint-enable no-invalid-this */
 
-/**
+/*
  * Reads a varint as a signed 64 bit value.
  * @name Reader#int64
  * @function
  * @returns {Long} Value read
  */
 
-/**
+/*
  * Reads a varint as an unsigned 64 bit value.
  * @name Reader#uint64
  * @function
  * @returns {Long} Value read
  */
 
-/**
+/*
  * Reads a zig-zag encoded varint as a signed 64 bit value.
  * @name Reader#sint64
  * @function
@@ -246,14 +246,14 @@ function readFixed64(/* this: Reader */) {
 
 /* eslint-enable no-invalid-this */
 
-/**
+/*
  * Reads fixed 64 bits.
  * @name Reader#fixed64
  * @function
  * @returns {Long} Value read
  */
 
-/**
+/*
  * Reads zig-zag encoded fixed 64 bits.
  * @name Reader#sfixed64
  * @function
