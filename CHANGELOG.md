@@ -1,3 +1,9 @@
+# [1.2.1](https://github.com/apollographql/protobuf.js/releases/tag/1.2.1)
+
+## Fixed
+[:hash:](https://github.com/apollographql/protobuf.js/commit/81365e92adca569173362634f20760592ab67809) remove long import ([#7](https://github.com/apollographql/protobuf.js/issues/7))<br />
+
+
 # [1.2.0](https://github.com/apollographql/protobuf.js/releases/tag/1.2.0)
 
 ## Other
