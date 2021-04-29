@@ -1,5 +1,3 @@
-import * as Long from "long";
-
 import * as $protobuf from "../..";
 export class MyService extends $protobuf.rpc.Service {
     constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);

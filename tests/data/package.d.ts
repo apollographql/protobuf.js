@@ -1,5 +1,3 @@
-import * as Long from "long";
-
 import * as $protobuf from "../..";
 export interface IPackage {
     name?: (string|null);
