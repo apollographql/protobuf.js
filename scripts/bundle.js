@@ -20,8 +20,7 @@ var pkg = require(path.join(__dirname, "..", "package.json"));
 /*eslint-disable no-template-curly-in-string*/
 var license = [
     "/*!",
-    " * protobuf.js v${version} (c) 2016, daniel wirtz",
-    " * compiled ${date}",
+    " * protobuf.js (c) 2016, daniel wirtz",
     " * licensed under the bsd-3-clause license",
     " * see: https://github.com/apollographql/protobuf.js for details",
     " */"
