@@ -1,6 +1,6 @@
 # 2.0.0
 
-- Stop the CLI from installing its dependencies (unversioned!) at runtime. When you run the CLI you need to have already installed its dependencies as your own devDependencies.
+- Stop the CLI from installing its dependencies (unversioned!) at runtime. When you run the CLI you need to have already installed its dependencies as your own devDependencies. (Note: this didn't solve the problem we were trying to solve and we haven't actually used it in apollo-reporting-protobuf yet.)
 
 # [1.2.2](https://github.com/apollographql/protobuf.js/releases/tag/1.2.2)
 
