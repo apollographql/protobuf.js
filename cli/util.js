@@ -3,7 +3,7 @@ var fs            = require("fs"),
     path          = require("path"),
     child_process = require("child_process");
 
-var semver;
+var semver = require("semver");
 
 try {
     // installed as a peer dependency
@@ -133,27 +133,33 @@ function modInstall(install) {
 }
 
 exports.setup = function() {
-    var pkg = require(path.join(__dirname, "..", "package.json"));
-    var version = pkg.dependencies["semver"] || pkg.devDependencies["semver"];
-    if (!modExists("semver", version)) {
-        process.stderr.write("installing semver@" + version + "\n");
-        modInstall("semver@" + version);
-    }
-    semver = require("semver"); // used from now on for version comparison
-    var install = [];
-    pkg.cliDependencies.forEach(function(name) {
-        if (name === "semver")
-            return;
-        version = pkg.dependencies[name] || pkg.devDependencies[name];
-        if (!modExists(name, version)) {
-            process.stderr.write("installing " + name + "@" + version + "\n");
-            install.push(name + "@" + version);
-        }
-    });
-    require("../scripts/postinstall"); // emit postinstall warning, if any
-    if (!install.length)
-        return;
-    modInstall(install);
+    // This thing where the CLI installs dependencies at runtime without any
+    // pinning is very strange. Since we only really care about using this
+    // CLI from apollo-reporting-protobuf we can just make sure that there
+    // are appropriate devDependencies set up in that package and not do this
+    // strange thing.
+
+    // var pkg = require(path.join(__dirname, "..", "package.json"));
+    // var version = pkg.dependencies["semver"] || pkg.devDependencies["semver"];
+    // if (!modExists("semver", version)) {
+    //     process.stderr.write("installing semver@" + version + "\n");
+    //     modInstall("semver@" + version);
+    // }
+    // semver = require("semver"); // used from now on for version comparison
+    // var install = [];
+    // pkg.cliDependencies.forEach(function(name) {
+    //     if (name === "semver")
+    //         return;
+    //     version = pkg.dependencies[name] || pkg.devDependencies[name];
+    //     if (!modExists(name, version)) {
+    //         process.stderr.write("installing " + name + "@" + version + "\n");
+    //         install.push(name + "@" + version);
+    //     }
+    // });
+    // require("../scripts/postinstall"); // emit postinstall warning, if any
+    // if (!install.length)
+    //     return;
+    // modInstall(install);
 };
 
 exports.wrap = function(OUTPUT, options) {
