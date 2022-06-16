@@ -1,3 +1,8 @@
+# [1.2.3](https://github.com/apollographql/protobuf.js/releases/tag/1.2.3)
+
+## New
+[:hash:](https://github.com/apollographql/protobuf.js/commit/98a940b62b38411c3dc01ee30b3b7fe5885b9b34) Never initialize util.Long<br />
+
 # [1.2.2](https://github.com/apollographql/protobuf.js/releases/tag/1.2.2)
 
 ## Fixed
