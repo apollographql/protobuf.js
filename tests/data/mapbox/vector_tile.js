@@ -301,7 +301,7 @@ $root.vector_tile = (function() {
              * @memberof vector_tile.Tile.Value
              * @instance
              */
-            Value.prototype.intValue = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+            Value.prototype.intValue = 0;
 
             /**
              * Value uintValue.
@@ -309,7 +309,7 @@ $root.vector_tile = (function() {
              * @memberof vector_tile.Tile.Value
              * @instance
              */
-            Value.prototype.uintValue = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+            Value.prototype.uintValue = 0;
 
             /**
              * Value sintValue.
@@ -317,7 +317,7 @@ $root.vector_tile = (function() {
              * @memberof vector_tile.Tile.Value
              * @instance
              */
-            Value.prototype.sintValue = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+            Value.prototype.sintValue = 0;
 
             /**
              * Value boolValue.
@@ -546,21 +546,9 @@ $root.vector_tile = (function() {
                     object.stringValue = "";
                     object.floatValue = 0;
                     object.doubleValue = 0;
-                    if ($util.Long) {
-                        var long = new $util.Long(0, 0, false);
-                        object.intValue = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.intValue = options.longs === String ? "0" : 0;
-                    if ($util.Long) {
-                        var long = new $util.Long(0, 0, true);
-                        object.uintValue = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.uintValue = options.longs === String ? "0" : 0;
-                    if ($util.Long) {
-                        var long = new $util.Long(0, 0, false);
-                        object.sintValue = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.sintValue = options.longs === String ? "0" : 0;
+                    object.intValue = 0;
+                    object.uintValue = 0;
+                    object.sintValue = 0;
                     object.boolValue = false;
                 }
                 if (message.stringValue != null && message.hasOwnProperty("stringValue"))
@@ -638,7 +626,7 @@ $root.vector_tile = (function() {
              * @memberof vector_tile.Tile.Feature
              * @instance
              */
-            Feature.prototype.id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+            Feature.prototype.id = 0;
 
             /**
              * Feature tags.
@@ -903,11 +891,7 @@ $root.vector_tile = (function() {
                     object.geometry = [];
                 }
                 if (options.defaults) {
-                    if ($util.Long) {
-                        var long = new $util.Long(0, 0, true);
-                        object.id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.id = options.longs === String ? "0" : 0;
+                    object.id = 0;
                     object.type = options.enums === String ? "UNKNOWN" : 0;
                 }
                 if (message.id != null && message.hasOwnProperty("id"))

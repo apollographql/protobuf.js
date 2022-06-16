@@ -68,7 +68,7 @@ $root.Message = (function() {
      * @memberof Message
      * @instance
      */
-    Message.prototype.uint64Val = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    Message.prototype.uint64Val = 0;
 
     /**
      * Message uint64Repeated.
@@ -477,11 +477,7 @@ $root.Message = (function() {
             object.int64Map = {};
         if (options.defaults) {
             object.stringVal = "";
-            if ($util.Long) {
-                var long = new $util.Long(0, 0, true);
-                object.uint64Val = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-            } else
-                object.uint64Val = options.longs === String ? "0" : 0;
+            object.uint64Val = 0;
             if (options.bytes === String)
                 object.bytesVal = "";
             else {

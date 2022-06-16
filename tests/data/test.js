@@ -3307,7 +3307,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.DefaultValues
              * @instance
              */
-            DefaultValues.prototype.intField = $util.Long ? $util.Long.fromBits(11,0,false) : 11;
+            DefaultValues.prototype.intField = 11;
 
             /**
              * DefaultValues enumField.
@@ -3543,11 +3543,7 @@ $root.jspb = (function() {
                 if (options.defaults) {
                     object.stringField = "default<>abc";
                     object.boolField = true;
-                    if ($util.Long) {
-                        var long = new $util.Long(11, 0, false);
-                        object.intField = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.intField = options.longs === String ? "11" : 11;
+                    object.intField = 11;
                     object.enumField = options.enums === String ? "E1" : 13;
                     object.emptyField = "";
                     if (options.bytes === String)
@@ -14345,7 +14341,7 @@ $root.google = (function() {
              * @memberof google.protobuf.UninterpretedOption
              * @instance
              */
-            UninterpretedOption.prototype.positiveIntValue = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+            UninterpretedOption.prototype.positiveIntValue = 0;
 
             /**
              * UninterpretedOption negativeIntValue.
@@ -14353,7 +14349,7 @@ $root.google = (function() {
              * @memberof google.protobuf.UninterpretedOption
              * @instance
              */
-            UninterpretedOption.prototype.negativeIntValue = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+            UninterpretedOption.prototype.negativeIntValue = 0;
 
             /**
              * UninterpretedOption doubleValue.
@@ -14611,16 +14607,8 @@ $root.google = (function() {
                     object.name = [];
                 if (options.defaults) {
                     object.identifierValue = "";
-                    if ($util.Long) {
-                        var long = new $util.Long(0, 0, true);
-                        object.positiveIntValue = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.positiveIntValue = options.longs === String ? "0" : 0;
-                    if ($util.Long) {
-                        var long = new $util.Long(0, 0, false);
-                        object.negativeIntValue = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.negativeIntValue = options.longs === String ? "0" : 0;
+                    object.positiveIntValue = 0;
+                    object.negativeIntValue = 0;
                     object.doubleValue = 0;
                     if (options.bytes === String)
                         object.stringValue = "";
