@@ -158,11 +158,13 @@ util.newBuffer = function newBuffer(sizeOrArray) {
 util.Array = typeof Uint8Array !== "undefined" ? Uint8Array /* istanbul ignore next */ : Array;
 
 /*
- * Long.js's Long class if available.
+ * Long.js's Long class if available and $ENABLE_LONG is set. This lets us leave it on
+ * for this package's tests but have it be off in actual usage-reporting-protobuf use.
+ * (We leave it on for some mode where there is no `process` that is used by tests.)
  */
-util.Long = /* istanbul ignore next */ util.global.dcodeIO && /* istanbul ignore next */ util.global.dcodeIO.Long
+util.Long = (typeof process === 'undefined' || process.env.ENABLE_LONG) ? (/* istanbul ignore next */ util.global.dcodeIO && /* istanbul ignore next */ util.global.dcodeIO.Long
          || /* istanbul ignore next */ util.global.Long
-         || util.inquire("long");
+         || util.inquire("long")) : undefined;
 
 /**
  * Regular expression used to verify 2 bit (`bool`) map keys.
