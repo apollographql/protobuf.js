@@ -1,3 +1,8 @@
+# [1.2.4](https://github.com/apollographql/protobuf.js/releases/tag/1.2.4)
+
+## New
+[:hash:](https://github.com/apollographql/protobuf.js/commit/ca7eb37a01b3c74d798fee01e051b677b86c2979) Improve ES6 support<br />
+
 # [1.2.3](https://github.com/apollographql/protobuf.js/releases/tag/1.2.3)
 
 ## New
