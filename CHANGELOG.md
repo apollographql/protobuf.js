@@ -1,3 +1,8 @@
+# [1.2.5](https://github.com/apollographql/protobuf.js/releases/tag/1.2.5)
+
+## New
+[:hash:](https://github.com/apollographql/protobuf.js/commit/0774f3ab66f902f4cafa55d61c469d7413d92bfb) Add .npmignore to drop package-lock files<br />
+
 # [1.2.4](https://github.com/apollographql/protobuf.js/releases/tag/1.2.4)
 
 ## New
