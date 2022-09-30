@@ -1,3 +1,10 @@
+# [1.2.6](https://github.com/apollographql/protobuf.js/releases/tag/1.2.6)
+
+## Other
+[:hash:](https://github.com/apollographql/protobuf.js/commit/e66477bc9abcb1f71aa0440fd23b09361f13bb96) Stop writing version and date to dist files<br />
+[:hash:](https://github.com/apollographql/protobuf.js/commit/bd5c971461c4e4ee32debe73a1d2e09be3e31301) Actually drop package-lock.json files<br />
+[:hash:](https://github.com/apollographql/protobuf.js/commit/1d301192c94352d08b7f4341a5ba7667bc154fdc) Revert "Add .npmignore to drop package-lock files"<br />
+
 # [1.2.5](https://github.com/apollographql/protobuf.js/releases/tag/1.2.5)
 
 ## New
