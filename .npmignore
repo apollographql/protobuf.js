@@ -1,0 +1,13 @@
+*.log
+npm-debug.*
+node_modules/
+cli/node_modules/
+docs/
+coverage/
+sandbox/
+
+# There's no need to publish package-lock.json and some
+# of the deps are janky and old and trigger false alarms
+# in security scanners: https://github.com/apollographql/apollo-server/issues/6835
+package-lock.json
+**/package-lock.json
