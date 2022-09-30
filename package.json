@@ -121,6 +121,7 @@
     "dist/**",
     "ext/**",
     "google/**",
-    "src/**"
+    "src/**",
+    "!**/package-lock.json"
   ]
 }
