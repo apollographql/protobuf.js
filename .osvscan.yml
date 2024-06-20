@@ -1,0 +1,194 @@
+---
+allowlist:
+  - package: path-parse
+    version: 1.0.5
+    lockfile: package-lock.json
+  - package: cached-path-relative
+    version: 1.0.2
+    lockfile: package-lock.json
+  - package: bl
+    version: 1.2.2
+    lockfile: package-lock.json
+  - package: mixin-deep 
+    version: 1.3.1
+    lockfile: package-lock.json
+  - package: ini
+    version: 1.3.5
+    lockfile: package-lock.json
+  - package: shell-quote
+    version: 1.6.1
+    lockfile: package-lock.json
+  - package: set-value-nuget
+    version: 0.4.3
+    lockfile: package-lock.json
+  - package: set-value
+    version: 0.4.3
+    lockfile: package-lock.json
+  - package: set-value
+    version: 2.0.0
+    lockfile: package-lock.json
+  - package: copy-props
+    version: 2.0.4
+    lockfile: package-lock.json
+  - package: async
+    version: 2.6.1
+    lockfile: package-lock.json
+  - package: hosted-git-info
+    version: 2.6.0
+    lockfile: package-lock.json
+  - package: trim-newlines
+    version: 2.0.0
+    lockfile: package-lock.json
+  - package: extend
+    version: 3.0.1
+    lockfile: package-lock.json
+  - package: y18n
+    version: 3.2.1
+    lockfile: package-lock.json
+  - package: browserify-sign
+    version: 4.0.4
+    lockfile: package-lock.json
+  - package: handlebars
+    version: 4.1.2
+    lockfile: package-lock.json
+  - package: org.webjars:handlebars
+    version: 4.1.2
+    lockfile: package-lock.json
+  - package: org.webjars.npm:handlebars
+    version: 4.1.2
+    lockfile: package-lock.json
+  - package: org.webjars.bowergithub.wycats:handlebars.js
+    version: 4.1.2
+    lockfile: package-lock.json
+  - package: gh-pages
+    version: 1.2.0
+    lockfile: package-lock.json
+  - package: yargs-parser
+    version: 5.0.0
+    lockfile: package-lock.json
+  - package: acorn
+    version: 5.5.3
+    lockfile: package-lock.json
+  - package: kind-of
+    version: 6.0.2
+    lockfile: package-lock.json
+  - package: acorn
+    version: 6.4.1
+    lockfile: package-lock.json
+  - package: acorn
+    version: 6.1.1
+    lockfile: package-lock.json
+  - package: elliptic
+    version: 6.4.1
+    lockfile: package-lock.json
+  - package: underscore
+    version: 1.9.1
+    lockfile: cli/package-lock.json
+  - package: underscore
+    version: 1.9.1
+    lockfile: package-lock.json
+  - package: fsevents
+    version: 1.2.4
+    lockfile: package-lock.json
+  - package: markdown-it
+    version: 8.4.2
+    lockfile: cli/package-lock.json
+  - package: markdown-it
+    version: 8.4.2
+    lockfile: package-lock.json
+  - package: marked
+    version: 0.7.0
+    lockfile: cli/package-lock.json
+  - package: marked
+    version: 0.7.0
+    lockfile: package-lock.json
+  - package: tar
+    version: 4.4.8
+    lockfile: package-lock.json
+  - package: ajv
+    version: 5.5.2
+    lockfile: package-lock.json
+  - package: lodash
+    version: 4.17.11
+    lockfile: package-lock.json
+  - package: lodash-amd
+    version: 4.17.11
+    lockfile: package-lock.json
+  - package: lodash-es
+    version: 4.17.11
+    lockfile: package-lock.json
+  - package: minimist
+    version: 0.0.8
+    lockfile: cli/package-lock.json
+  - package: minimist
+    version: 0.0.10
+    lockfile: package-lock.json
+  - package: minimist
+    version: 0.0.8
+    lockfile: package-lock.json
+  - package: minimist
+    version: 1.2.0
+    lockfile: cli/package-lock.json
+  - package: minimist
+    version: 1.2.0
+    lockfile: package-lock.json
+  - package: lodash
+    version: 4.17.15
+    lockfile: cli/package-lock.json
+  - package: lodash
+    version: 4.17.15
+    lockfile: package-lock.json
+  - package: lodash-es
+    version: 4.17.15
+    lockfile: cli/package-lock.json
+  - package: lodash-es
+    version: 4.17.15
+    lockfile: package-lock.json
+  - package: lodash-es
+    version: 3.0.0
+    lockfile: package-lock.json
+  - package: minimatch
+    version: 3.0.4
+    lockfile: package-lock.json
+  - package: braces
+    version: 2.3.2
+    lockfile: package-lock.json
+  - package: taffy
+    version: 2.6.2
+    lockfile: cli/package-lock.json
+  - package: taffy
+    version: 2.6.2
+    lockfile: package-lock.json
+  - package: taffydb
+    version: 2.6.2
+    lockfile: cli/package-lock.json
+  - package: taffydb
+    version: 2.6.2
+    lockfile: package-lock.json
+  - package: glob-parent
+    version: 3.1.0
+    lockfile: package-lock.json
+  - package: lodash.template
+    version: 4.4.0
+    lockfile: package-lock.json
+  - package: lodash
+    version: 4.4.0
+    lockfile: package-lock.json
+  - package: lodash-es
+    version: 4.4.0
+    lockfile: package-lock.json
+  - package: semver
+    version: 5.5.0
+    lockfile: package-lock.json
+  - package: decode-uri-component
+    version: 0.2.0
+    lockfile: package-lock.json
+  - package: node-tar
+    version: 4.4.8
+    lockfile: package-lock.json
+  - package: es5-ext
+    version: 0.10.42
+    lockfile: package-lock.json
+  - package: ansi-regex
+    version: 3.0.0
+    lockfile: package-lock.json
