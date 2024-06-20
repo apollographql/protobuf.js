@@ -1,3 +1,10 @@
+# This file is an Apollo convention.
+# It indicates to the vulnerability scanner that Apollo uses
+# to identify vulnerabilities in our dependencies
+# that it should ignore findings in the following package/package versions.
+# 
+# These packages are used at build-time only and do not
+# introduce runtime vulnerabilities.
 ---
 allowlist:
   - package: path-parse
