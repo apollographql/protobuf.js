@@ -1,3 +1,8 @@
+# [1.2.7](https://github.com/apollographql/protobuf.js/releases/tag/1.2.7)
+
+## Other
+[:hash:](https://github.com/apollographql/protobuf.js/commit/4bad737c41cacbcf1bb165e5c4c73ad260cb500b) Avoid false positive security scanner results by fixing a vulnerability that requires user-controlled protobuf descriptors (`@apollo/protobufjs` is only for use with Apollo Server's protobuf file)<br />
+
 # [1.2.6](https://github.com/apollographql/protobuf.js/releases/tag/1.2.6)
 
 ## Other

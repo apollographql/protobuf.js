@@ -1,17 +1,19 @@
+# Apollo fork
+
+We have forked the [source repo](https://github.com/dcodeIO/protobuf.js) because we need to make changes to the package for use in Apollo Server.
+
+**THIS PACKAGE IS ONLY FOR INTERNAL USE BY APOLLO SERVER.** You should not use it directly in any other context. It should only be used with the specific protobuf definitions from Apollo Server, and certainly should not be used with user-controlled protobuf definitions (Apollo has not endeavored to patch all upstream vulnerabilities that only affect usage with user-controlled protobuf definitions.)
+
+Version 1.0.0 was forked from `master` which contained version 6.8.8 plus a few unreleased commits. [sha](https://github.com/protobufjs/protobuf.js/commit/4d490eb1bf71f5c5c4c9d253a2ffd36edea12386)
+
+
+
 <h1><p align="center"><img alt="protobuf.js" src="https://github.com/dcodeIO/protobuf.js/raw/master/pbjs.png" width="120" height="104" /></p></h1>
 <p align="center"><a href="https://npmjs.org/package/protobufjs"><img src="https://img.shields.io/npm/v/protobufjs.svg" alt=""></a> <a href="https://travis-ci.org/dcodeIO/protobuf.js"><img src="https://travis-ci.org/dcodeIO/protobuf.js.svg?branch=master" alt=""></a> <a href="https://npmjs.org/package/protobufjs"><img src="https://img.shields.io/npm/dm/protobufjs.svg" alt=""></a> <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=dcode%40dcode.io&item_name=Open%20Source%20Software%20Donation&item_number=dcodeIO%2Fprotobuf.js"><img alt="donate ❤" src="https://img.shields.io/badge/donate-❤-ff2244.svg"></a></p>
 
 **Protocol Buffers** are a language-neutral, platform-neutral, extensible way of serializing structured data for use in communications protocols, data storage, and more, originally designed at Google ([see](https://developers.google.com/protocol-buffers/)).
 
 **protobuf.js** is a pure JavaScript implementation with [TypeScript](https://www.typescriptlang.org) support for [node.js](https://nodejs.org) and the browser. It's easy to use, blazingly fast and works out of the box with [.proto](https://developers.google.com/protocol-buffers/docs/proto) files!
-
-Apollo GraphQL fork
--------------------
-We have forked the [source repo](https://github.com/dcodeIO/protobuf.js) because we need to make changes to the package 
-for use in Apollo Server.
-
-Version 1.0.0 was forked from `master` which contained version 6.8.8 plus a few unreleased commits. [sha](https://github.com/protobufjs/protobuf.js/commit/4d490eb1bf71f5c5c4c9d253a2ffd36edea12386)
-
 
 Contents
 --------
