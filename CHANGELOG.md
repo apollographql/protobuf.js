@@ -1,7 +1,12 @@
-# [1.2.7](https://github.com/apollographql/protobuf.js/releases/tag/1.2.7)
+# [1.2.8](https://github.com/apollographql/protobuf.js/releases/tag/1.2.8)
 
 ## Other
 [:hash:](https://github.com/apollographql/protobuf.js/commit/4bad737c41cacbcf1bb165e5c4c73ad260cb500b) Avoid false positive security scanner results by fixing a vulnerability that requires user-controlled protobuf descriptors (`@apollo/protobufjs` is only for use with Apollo Server's protobuf file)<br />
+
+# [1.2.7](https://github.com/apollographql/protobuf.js/releases/tag/1.2.7)
+
+## Other
+Remove unused `@types/node` dependency. (The commit for this release was never pushed to git; the change was recreated as part of releasing v1.2.8.)
 
 # [1.2.6](https://github.com/apollographql/protobuf.js/releases/tag/1.2.6)
 
